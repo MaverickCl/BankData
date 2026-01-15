@@ -8,13 +8,13 @@ y escalable.
 
 ## Problemas del Código Original
 
--   Nombres de columnas hardcodeados\
--   Valores categóricos fijos\
--   Año fijo para generaciones\
--   No validaba columnas antes de usarlas\
--   Funciones grandes y poco modulares\
--   Difícil de adaptar a otros datasets\
--   Uso excesivo de `print`\
+-   Nombres de columnas hardcodeados
+-   Valores categóricos fijos
+-   Año fijo para generaciones
+-   No validaba columnas antes de usarlas
+-   Funciones grandes y poco modulares
+-   Difícil de adaptar a otros datasets
+-   Uso excesivo de `print`
 -   Poco manejo de errores
 
 ------------------------------------------------------------------------
@@ -25,9 +25,9 @@ y escalable.
 
 Creé un sistema de configuración para:
 
--   Mapear nombres de columnas\
--   Mapear valores categóricos\
--   Definir generaciones con año dinámico\
+-   Mapear nombres de columnas
+-   Mapear valores categóricos
+-   Definir generaciones con año dinámico
 -   Configurar rutas y parámetros generales
 
 Esto permite adaptar el análisis a otros datasets sin tocar el código
@@ -39,9 +39,9 @@ principal.
 
 Agregué validaciones para:
 
--   Verificar columnas requeridas\
--   Validar valores de la variable objetivo\
--   Revisar rangos numéricos\
+-   Verificar columnas requeridas
+-   Validar valores de la variable objetivo
+-   Revisar rangos numéricos
 -   Validar todo el dataset antes del análisis
 
 Así evito errores más adelante por datos malos.
@@ -52,8 +52,8 @@ Así evito errores más adelante por datos malos.
 
 Separé responsabilidades:
 
--   Configuración\
--   Validación\
+-   Configuración
+-   Validación
 -   Análisis
 
 Cada parte hace una sola cosa y es más fácil de mantener.
@@ -73,8 +73,8 @@ Esto permitiría agregar nuevos análisis sin tocar el núcleo.
 
 Cambiar `print` por logging estructurado:
 
--   Logs en consola y archivo\
--   Diferentes niveles (info, warning, error)\
+-   Logs en consola y archivo
+-   Diferentes niveles (info, warning, error)
 -   Historial de ejecuciones
 
 ------------------------------------------------------------------------
@@ -83,8 +83,8 @@ Cambiar `print` por logging estructurado:
 
 Sistema donde:
 
--   Cada análisis tenga dependencias\
--   Se ejecuten en orden automático\
+-   Cada análisis tenga dependencias
+-   Se ejecuten en orden automático
 -   Posible ejecución paralela en el futuro
 
 ------------------------------------------------------------------------
@@ -117,7 +117,7 @@ basic_target_analysis(df)
 
 ## Resumen de Impacto
 
--   Más flexible\
--   Más seguro\
--   Más mantenible\
+-   Más flexible
+-   Más seguro
+-   Más mantenible
 -   Reutilizable en otros datasets\
